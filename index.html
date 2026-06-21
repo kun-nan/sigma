@@ -245,6 +245,7 @@
         .hero-content {
             position: relative;
             z-index: 10;
+            width: 100%;
             max-width: 900px;
             display: flex;
             flex-direction: column;
@@ -272,7 +273,7 @@
             text-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }
 
-        .hero-title span {
+        .hero-title span:last-child {
             color: var(--yellow);
         }
 
@@ -989,14 +990,23 @@
             }
 
             .hero-title {
-                font-size: clamp(2rem, 10vw, 3.5rem);
-                line-height: 1.1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.25rem;
+                font-size: clamp(2.2rem, 11vw, 3.8rem);
+                line-height: 1;
                 word-wrap: break-word;
+            }
+
+            .hero-title span {
+                display: block;
             }
 
             .hero-subtitle {
                 font-size: 1rem;
                 padding: 0 1rem;
+                line-height: 1.6;
             }
 
             section {
@@ -1039,7 +1049,7 @@
     <section id="hero" class="full-bleed">
         <div class="hero-content">
             <p class="hero-eyebrow">3 Milestones. 1 Mission.</p>
-            <h1 class="hero-title">SIGMA90 <span>CHALLENGE</span></h1>
+            <h1 class="hero-title"><span>SIGMA90</span> <span>CHALLENGE</span></h1>
             <p class="hero-subtitle">90 Days to transform your body, mind, and life. Cultivate absolute discipline, consistency, and mental grit.</p>
             <div class="hero-pillars">
                 <span class="pillar-badge active">Discipline</span>
