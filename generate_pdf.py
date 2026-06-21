@@ -88,7 +88,7 @@ def generate_pdf():
     story = []
     
     # Header Section
-    story.append(Paragraph("Σ SIGMA CHALLENGE", title_style))
+    story.append(Paragraph("Σ SIGMA90 CHALLENGE", title_style))
     story.append(Paragraph("30-DAY DISCIPLINE PROTOCOL TRACKER", subtitle_style))
     
     # Table headers
