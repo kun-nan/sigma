@@ -782,135 +782,6 @@
             line-height: 1.4;
         }
 
-        /* Interactive Widgets (Water / Creativity) */
-        .widget-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .widget-box {
-            background: var(--black-2);
-            border: 1px solid var(--grey-dim);
-            border-radius: 8px;
-            padding: 2.5rem;
-        }
-
-        .widget-title {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .water-bottles {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-        }
-
-        .water-bottle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .water-bottle:active {
-            transform: scale(0.95);
-        }
-
-        .bottle-svg-wrapper {
-            position: relative;
-            width: 60px;
-            height: 120px;
-        }
-
-        .bottle-svg {
-            width: 100%;
-            height: 100%;
-            fill: none;
-            stroke: var(--grey-dim);
-            stroke-width: 2;
-            transition: stroke 0.3s;
-        }
-
-        .bottle-liquid {
-            position: absolute;
-            bottom: 6px;
-            left: 6px;
-            right: 6px;
-            top: 114px; /* Filled controls top position, 6px is full, 114px is empty */
-            background: linear-gradient(180deg, #38BDF8 0%, #0284C7 100%);
-            border-radius: 0 0 6px 6px;
-            transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 0.85;
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
-        }
-
-        .water-bottle.filled .bottle-svg {
-            stroke: #38BDF8;
-        }
-
-        .water-bottle.filled .bottle-liquid {
-            top: 25px; /* Almost full, account for neck shape */
-        }
-
-        .bottle-lbl {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--grey);
-            font-weight: 600;
-        }
-
-        .water-bottle.filled .bottle-lbl {
-            color: #38BDF8;
-        }
-
-        .creativity-input {
-            width: 100%;
-            height: 100px;
-            background: var(--black-3);
-            border: 1px solid var(--grey-dim);
-            border-radius: 4px;
-            color: var(--white);
-            padding: 1rem;
-            font-family: inherit;
-            font-size: 0.9rem;
-            resize: none;
-            margin-bottom: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .creativity-input:focus {
-            border-color: var(--yellow);
-        }
-
-        .tracker-save-btn {
-            width: 100%;
-            background: var(--yellow);
-            color: var(--black);
-            border: none;
-            padding: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .tracker-save-btn:hover {
-            background: var(--yellow-light);
-            box-shadow: 0 5px 15px rgba(230, 176, 34, 0.3);
-        }
-
         /* Failure & Warning Callout */
         #failure {
             background-color: var(--black);
@@ -1225,7 +1096,7 @@
         <div class="nav-links">
             <a href="#milestones" class="nav-link">Milestones</a>
             <a href="#rules" class="nav-link">Rules</a>
-            <a href="#tracker" class="nav-link">Daily Tracker</a>
+            <a href="#tracker" class="nav-link">PDF Tracker</a>
             <a href="#faq" class="nav-link">FAQ</a>
         </div>
         <a href="https://forms.gle/As6Fp6w7RoeoxMwg9" target="_blank" class="nav-cta">Start Challenge</a>
@@ -1244,7 +1115,7 @@
             </div>
             <div class="hero-buttons">
                 <a href="https://forms.gle/As6Fp6w7RoeoxMwg9" target="_blank" class="btn btn-primary">Start the Challenge</a>
-                <a href="#tracker" class="btn btn-secondary">Interactive Tracker</a>
+                <a href="#tracker" class="btn btn-secondary">Download PDF Tracker</a>
             </div>
         </div>
     </section>
@@ -1386,7 +1257,7 @@
             <!-- RULE 06 -->
             <div class="rule-card reveal">
                 <div class="rule-image-container">
-                    <img class="rule-image" src="assets/rule_modern_indian_language_learning.png" alt="Creativity & Learning">
+                    <img class="rule-image" src="assets/rule_modern_indian_language_learning.png" alt="Mental Training">
                     <div class="rule-image-overlay"></div>
                 </div>
                 <div class="rule-text-content">
@@ -1394,8 +1265,8 @@
                         <div class="rule-number">05</div>
                         <div class="rule-tag">COGNITIVE EXPANSION</div>
                     </div>
-                    <h3 class="rule-title-text">10 Mins of Creativity. <span>Daily.</span></h3>
-                    <p class="rule-desc-text">Expand your neural pathways. Devote 10 minutes daily to active production: writing code/essays, painting, drawing, learning a new language, or playing an instrument. No passive scrolling.</p>
+                    <h3 class="rule-title-text">10 Mins of Mental Training. <span>Daily.</span></h3>
+                    <p class="rule-desc-text">Train your mind for neuroplasticity. Devote 10 minutes daily to active mental exercises: language learning, practicing a musical instrument, coding complex algorithms, or active mathematical/memory study. Push cognitive boundaries.</p>
                 </div>
             </div>
 
@@ -1407,7 +1278,7 @@
                         <div class="rule-tag">LOGGING & INTEGRITY</div>
                     </div>
                     <h3 class="rule-title-text">Daily Checklist & Log. <span>Unbroken.</span></h3>
-                    <p class="rule-desc-text">Log your activities, track your status, and keep record of your path. A protocol not logged is a protocol not managed. Hold yourself 100% accountable using our dashboard tracker below.</p>
+                    <p class="rule-desc-text">Log your activities, track your status, and keep record of your path. A protocol not logged is a protocol not managed. Hold yourself 100% accountable using our downloadable tracker PDF below.</p>
                 </div>
                 <div class="rule-image-container">
                     <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #1E1B4B 0%, var(--black-2) 100%); position: relative;">
@@ -1419,163 +1290,23 @@
         </div>
     </section>
 
-    <!-- Interactive Tracker Section -->
+    <!-- PDF Tracker Download Section -->
     <section id="tracker">
         <div class="section-header reveal">
-            <span class="section-eyebrow">The Runtime Dashboard</span>
-            <h2 class="section-title">Σ Interactive Daily Log</h2>
+            <span class="section-eyebrow">The Protocol Log</span>
+            <h2 class="section-title">Σ 30-Day Tracker PDF</h2>
             <div class="divider-yellow" style="margin-top: 1.5rem; margin-bottom: 0;"></div>
         </div>
 
-        <div class="tracker-panel reveal">
-            <div class="tracker-header">
-                <div class="tracker-day-select">
-                    <button class="tracker-day-btn" id="prev-day-btn">&lt;</button>
-                    <div class="tracker-day-display">
-                        <h3 class="tracker-day-title" id="day-num-title">Day 1</h3>
-                        <p class="tracker-day-subtitle">of 90 Days</p>
-                    </div>
-                    <button class="tracker-day-btn" id="next-day-btn">&gt;</button>
-                </div>
-                <div class="tracker-stats">
-                    <div class="tracker-stat-item">
-                        <div class="tracker-stat-val" id="streak-val">0</div>
-                        <div class="tracker-stat-lbl">Active Streak</div>
-                    </div>
-                    <div class="tracker-stat-item">
-                        <div class="tracker-stat-val" id="completion-val">0%</div>
-                        <div class="tracker-stat-lbl">Overall Progress</div>
-                    </div>
-                </div>
+        <div class="tracker-panel reveal" style="text-align: center; max-width: 800px; margin: 2rem auto 0; padding: 4rem 2rem;">
+            <div style="font-size: 3rem; color: var(--yellow); margin-bottom: 1.5rem;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </div>
-
-            <div class="tracker-layout">
-                <div class="tracker-checklist">
-                    <h3 class="font-heading" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--yellow);">Daily Rules</h3>
-                    
-                    <!-- Rule Item 1 -->
-                    <label class="checklist-item" id="item-workout">
-                        <div class="checklist-checkbox-wrapper">
-                            <input type="checkbox" class="checklist-checkbox" id="chk-workout">
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">1 Hour Workout Complete</div>
-                            <div class="checklist-desc">60 minutes of high performance training. No shortcuts.</div>
-                        </div>
-                    </label>
-
-                    <!-- Rule Item 2 -->
-                    <label class="checklist-item" id="item-rest">
-                        <div class="checklist-checkbox-wrapper">
-                            <input type="checkbox" class="checklist-checkbox" id="chk-rest">
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">Weekly Rest Day / Recovery Activated</div>
-                            <div class="checklist-desc">No structured physical workout today. Recovery rules apply.</div>
-                        </div>
-                    </label>
-
-                    <!-- Rule Item 3 -->
-                    <label class="checklist-item" id="item-water">
-                        <div class="checklist-checkbox-wrapper">
-                            <!-- Disabled checkbox, checked via bottle widget -->
-                            <input type="checkbox" class="checklist-checkbox" id="chk-water" disabled>
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">3 Litres Water Target</div>
-                            <div class="checklist-desc">Use the Water Quota panel to drink 3 allocations of 1L.</div>
-                        </div>
-                    </label>
-
-                    <!-- Rule Item 4 -->
-                    <label class="checklist-item" id="item-nosmoke">
-                        <div class="checklist-checkbox-wrapper">
-                            <input type="checkbox" class="checklist-checkbox" id="chk-nosmoke">
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">No Cigarettes / Nicotine</div>
-                            <div class="checklist-desc">Kept respiratory pathways completely clean.</div>
-                        </div>
-                    </label>
-
-                    <!-- Rule Item 5 -->
-                    <label class="checklist-item" id="item-noalcohol">
-                        <div class="checklist-checkbox-wrapper">
-                            <input type="checkbox" class="checklist-checkbox" id="chk-noalcohol">
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">No Alcohol / Toxic Agents</div>
-                            <div class="checklist-desc">Zero alcohol intake. Unbroken cognitive sobriety.</div>
-                        </div>
-                    </label>
-
-                    <!-- Rule Item 6 -->
-                    <label class="checklist-item" id="item-creativity">
-                        <div class="checklist-checkbox-wrapper">
-                            <input type="checkbox" class="checklist-checkbox" id="chk-creativity">
-                        </div>
-                        <div class="checklist-text">
-                            <div class="checklist-title">10 Mins of Active Creativity</div>
-                            <div class="checklist-desc">Creative work logged inside the Cognitive widget.</div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="widget-panel">
-                    <!-- Water Widget -->
-                    <div class="widget-box">
-                        <div class="widget-title">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
-                            <span>Water Intake Quota</span>
-                        </div>
-                        <p class="checklist-desc" style="margin-bottom: 1.5rem;">Tap bottles to log water intake. Reach 3 Litres to complete this rule.</p>
-                        <div class="water-bottles">
-                            <div class="water-bottle" id="bottle-1">
-                                <div class="bottle-svg-wrapper">
-                                    <div class="bottle-liquid"></div>
-                                    <svg class="bottle-svg" viewBox="0 0 50 110">
-                                        <path d="M20,10 L30,10 L30,22 L42,32 L42,100 C42,104 38,108 34,108 L16,108 C12,108 8,104 8,100 L8,32 L20,22 Z" />
-                                        <line x1="20" y1="16" x2="30" y2="16" />
-                                    </svg>
-                                </div>
-                                <span class="bottle-lbl">1L</span>
-                            </div>
-                            <div class="water-bottle" id="bottle-2">
-                                <div class="bottle-svg-wrapper">
-                                    <div class="bottle-liquid"></div>
-                                    <svg class="bottle-svg" viewBox="0 0 50 110">
-                                        <path d="M20,10 L30,10 L30,22 L42,32 L42,100 C42,104 38,108 34,108 L16,108 C12,108 8,104 8,100 L8,32 L20,22 Z" />
-                                        <line x1="20" y1="16" x2="30" y2="16" />
-                                    </svg>
-                                </div>
-                                <span class="bottle-lbl">1L</span>
-                            </div>
-                            <div class="water-bottle" id="bottle-3">
-                                <div class="bottle-svg-wrapper">
-                                    <div class="bottle-liquid"></div>
-                                    <svg class="bottle-svg" viewBox="0 0 50 110">
-                                        <path d="M20,10 L30,10 L30,22 L42,32 L42,100 C42,104 38,108 34,108 L16,108 C12,108 8,104 8,100 L8,32 L20,22 Z" />
-                                        <line x1="20" y1="16" x2="30" y2="16" />
-                                    </svg>
-                                </div>
-                                <span class="bottle-lbl">1L</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Creativity Widget -->
-                    <div class="widget-box">
-                        <div class="widget-title">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            <span>Cognitive Log</span>
-                        </div>
-                        <p class="checklist-desc" style="margin-bottom: 1rem;">Document your 10 minutes of active skill practice or creation today.</p>
-                        <textarea class="creativity-input" id="creativity-log" placeholder="E.g., Coded layout mechanics, completed Duolingo lessons, wrote a short essay..."></textarea>
-                        
-                        <button class="tracker-save-btn" id="log-day-btn">Log & Complete Day</button>
-                    </div>
-                </div>
-            </div>
+            <h3 class="font-heading" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">Printable 30-Day Checklist</h3>
+            <p class="checklist-desc" style="font-size: 1rem; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.8; color: var(--grey);">
+                Print your physical 30-day tracking grid. Keep it on your desk or wall, and check off each rule daily with a pen. Uncompromising physical logging keeps you 100% accountable.
+            </p>
+            <a href="assets/sigma_30_day_tracker.pdf" download class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 0.9rem;">Download Tracker PDF</a>
         </div>
     </section>
 
@@ -1587,7 +1318,6 @@
                 The Sigma protocol is binary. If you compromise on a single rule for a single day, you do not slide, negotiate, or carry over. 
                 <strong>You restart from Day 1 immediately.</strong> Absolute integrity is the only coin.
             </p>
-            <button class="btn btn-danger" id="fail-restart-btn">Declare Failure (Reset to Day 1)</button>
         </div>
     </section>
 
@@ -1604,7 +1334,7 @@
                     <div class="faq-item reveal"><div class="faq-question">What counts as a workout?</div><div class="faq-answer">Any dedicated physical effort: gym weightlifting, running, outdoor swimming, calisthenics, or yoga. Passive stretching does not count. The session must be a full 60 minutes.</div></div>
                     <div class="faq-item reveal"><div class="faq-question">Are the workouts outdoor?</div><div class="faq-answer">Unlike other programs, the Sigma Challenge workouts can be performed indoors or outdoors, but must run for exactly 60 minutes, 6 days a week, with one full recovery day.</div></div>
                     <div class="faq-item reveal"><div class="faq-question">Can I skip logging a day?</div><div class="faq-answer">No. Unbroken accountability is the core. If you skip logging, you have broken Rule 6 (Daily Checklist & Log), which requires a restart from Day 1.</div></div>
-                    <div class="faq-item reveal"><div class="faq-question">What is creative work?</div><div class="faq-answer">Active output rather than passive consumption. Writing, language learning lessons, drawing, architectural modeling, coding, or learning standard concepts. Listening to a podcast while resting does not count.</div></div>
+                    <div class="faq-item reveal"><div class="faq-question">What counts as mental training?</div><div class="faq-answer">Activities that actively train your mind for neuroplasticity, such as practicing a musical instrument, active language learning, coding, or rigorous technical study. Passive listening to podcasts or reading for entertainment does not count.</div></div>
                 </div>
             </div>
         </div>
@@ -1672,246 +1402,6 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
             });
-        });
-
-        // ==========================================
-        // DAILY CHECKLIST & LOG (LOCALSTORAGE ENGINE)
-        // ==========================================
-        
-        let trackerData = {
-            currentDay: 1,
-            streak: 0,
-            completionCount: 0, // perfect days logged
-            history: {} // maps Day number to completed state (true/false)
-        };
-
-        // Load State
-        function loadTrackerState() {
-            const saved = localStorage.getItem('sigma_challenge_data');
-            if (saved) {
-                try {
-                    trackerData = JSON.parse(saved);
-                } catch(e) {
-                    console.error("Failed to parse local storage state, using defaults", e);
-                }
-            }
-            updateUI();
-        }
-
-        // Save State
-        function saveTrackerState() {
-            localStorage.setItem('sigma_challenge_data', JSON.stringify(trackerData));
-        }
-
-        // Elements
-        const prevBtn = document.getElementById('prev-day-btn');
-        const nextBtn = document.getElementById('next-day-btn');
-        const dayTitle = document.getElementById('day-num-title');
-        const streakVal = document.getElementById('streak-val');
-        const completionVal = document.getElementById('completion-val');
-        
-        // Checklist Inputs
-        const chkWorkout = document.getElementById('chk-workout');
-        const chkRest = document.getElementById('chk-rest');
-        const chkWater = document.getElementById('chk-water');
-        const chkNoSmoke = document.getElementById('chk-nosmoke');
-        const chkNoAlcohol = document.getElementById('chk-noalcohol');
-        const chkCreativity = document.getElementById('chk-creativity');
-        const creativityLog = document.getElementById('creativity-log');
-        
-        // Water Bottles
-        const bottle1 = document.getElementById('bottle-1');
-        const bottle2 = document.getElementById('bottle-2');
-        const bottle3 = document.getElementById('bottle-3');
-        
-        // Log & Fail buttons
-        const logDayBtn = document.getElementById('log-day-btn');
-        const failBtn = document.getElementById('fail-restart-btn');
-
-        // Check list item parent toggles for visual strikethrough
-        const listItems = {
-            workout: document.getElementById('item-workout'),
-            rest: document.getElementById('item-rest'),
-            water: document.getElementById('item-water'),
-            nosmoke: document.getElementById('item-nosmoke'),
-            noalcohol: document.getElementById('item-noalcohol'),
-            creativity: document.getElementById('item-creativity')
-        };
-
-        let waterState = [false, false, false];
-
-        // Setup Event Listeners
-        prevBtn.addEventListener('click', () => {
-            if (trackerData.currentDay > 1) {
-                trackerData.currentDay--;
-                resetDailyFields();
-                updateUI();
-                saveTrackerState();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (trackerData.currentDay < 90) {
-                trackerData.currentDay++;
-                resetDailyFields();
-                updateUI();
-                saveTrackerState();
-            }
-        });
-
-        // Handle mutual exclusion for Rest & Workout
-        chkWorkout.addEventListener('change', () => {
-            if (chkWorkout.checked) {
-                chkRest.checked = false;
-                listItems.rest.classList.remove('checked');
-            }
-            updateItemCheckedStatus('workout', chkWorkout.checked);
-        });
-
-        chkRest.addEventListener('change', () => {
-            if (chkRest.checked) {
-                chkWorkout.checked = false;
-                listItems.workout.classList.remove('checked');
-            }
-            updateItemCheckedStatus('rest', chkRest.checked);
-        });
-
-        chkNoSmoke.addEventListener('change', () => updateItemCheckedStatus('nosmoke', chkNoSmoke.checked));
-        chkNoAlcohol.addEventListener('change', () => updateItemCheckedStatus('noalcohol', chkNoAlcohol.checked));
-        chkCreativity.addEventListener('change', () => updateItemCheckedStatus('creativity', chkCreativity.checked));
-
-        // Helper to update check status visually
-        function updateItemCheckedStatus(key, isChecked) {
-            if (isChecked) {
-                listItems[key].classList.add('checked');
-            } else {
-                listItems[key].classList.remove('checked');
-            }
-        }
-
-        // Water Bottle Toggles
-        function toggleBottle(idx, bottleElement) {
-            waterState[idx] = !waterState[idx];
-            if (waterState[idx]) {
-                bottleElement.classList.add('filled');
-            } else {
-                bottleElement.classList.remove('filled');
-            }
-            
-            // Check if water quota is met
-            const bottlesFilled = waterState.filter(b => b).length;
-            chkWater.checked = (bottlesFilled === 3);
-            updateItemCheckedStatus('water', chkWater.checked);
-        }
-
-        bottle1.addEventListener('click', () => toggleBottle(0, bottle1));
-        bottle2.addEventListener('click', () => toggleBottle(1, bottle2));
-        bottle3.addEventListener('click', () => toggleBottle(2, bottle3));
-
-        // Reset inputs on day changes (since logs don't save arbitrary past checklist states)
-        function resetDailyFields() {
-            chkWorkout.checked = false;
-            chkRest.checked = false;
-            chkWater.checked = false;
-            chkNoSmoke.checked = false;
-            chkNoAlcohol.checked = false;
-            chkCreativity.checked = false;
-            creativityLog.value = "";
-            waterState = [false, false, false];
-            
-            bottle1.classList.remove('filled');
-            bottle2.classList.remove('filled');
-            bottle3.classList.remove('filled');
-
-            Object.keys(listItems).forEach(key => {
-                listItems[key].classList.remove('checked');
-            });
-        }
-
-        // Update UI displays
-        function updateUI() {
-            dayTitle.innerText = `Day ${trackerData.currentDay}`;
-            streakVal.innerText = trackerData.streak;
-            
-            // Calculate progress percentage
-            const progressPct = Math.round((trackerData.completionCount / 90) * 100);
-            completionVal.innerText = `${progressPct}%`;
-            
-            // Adjust button states
-            prevBtn.disabled = (trackerData.currentDay === 1);
-            nextBtn.disabled = (trackerData.currentDay === 90);
-        }
-
-        // Log Day button clicked
-        logDayBtn.addEventListener('click', () => {
-            // Validation: Rest Day or Workout must be toggled (not both, at least one)
-            if (!chkWorkout.checked && !chkRest.checked) {
-                alert("Violated: You must either complete a 1-Hour Workout or mark today as your Rest Day.");
-                return;
-            }
-
-            // Other requirements: Water, no smoke, no alcohol, creativity are mandatory daily rules
-            if (!chkWater.checked) {
-                alert("Violated: 3 Litres of Water intake is mandatory.");
-                return;
-            }
-            if (!chkNoSmoke.checked) {
-                alert("Violated: Zero smoking rule must be checked.");
-                return;
-            }
-            if (!chkNoAlcohol.checked) {
-                alert("Violated: Zero alcohol rule must be checked.");
-                return;
-            }
-            if (!chkCreativity.checked) {
-                alert("Violated: 10 minutes of active creativity is required.");
-                return;
-            }
-
-            // If day is already logged, don't double count
-            const currentDayKey = trackerData.currentDay;
-            if (trackerData.history[currentDayKey]) {
-                alert(`Day ${currentDayKey} was already successfully logged!`);
-                return;
-            }
-
-            // Save status
-            trackerData.history[currentDayKey] = true;
-            trackerData.completionCount = Object.keys(trackerData.history).length;
-            trackerData.streak++;
-            
-            alert(`Congratulations! Day ${currentDayKey} has been officially logged in the archives.`);
-            
-            // Advance to next day if not day 90
-            if (trackerData.currentDay < 90) {
-                trackerData.currentDay++;
-            }
-            
-            resetDailyFields();
-            updateUI();
-            saveTrackerState();
-        });
-
-        // Fail / Reset Button clicked
-        failBtn.addEventListener('click', () => {
-            const confirmReset = confirm("CRITICAL ACCORD: Are you declaring failure? This will completely clear your streak and reset your progress back to Day 1. No negotiations.");
-            if (confirmReset) {
-                trackerData = {
-                    currentDay: 1,
-                    streak: 0,
-                    completionCount: 0,
-                    history: {}
-                };
-                resetDailyFields();
-                updateUI();
-                saveTrackerState();
-                alert("Archival data purged. Welcome back to Day 1. Show up tomorrow.");
-            }
-        });
-
-        // Initialize state on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            loadTrackerState();
         });
     </script>
 </body>
